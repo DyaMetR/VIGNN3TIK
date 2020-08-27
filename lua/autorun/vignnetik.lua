@@ -1,13 +1,13 @@
 --[[-------------
     VIGNN3TIK
- Version 2.2.1
-    24/01/20
+ Version 2.2.2
+    27/08/20
 
 By DyaMetR
 ]]---------------
 
 VGNTK = {};
-VGNTK.Version = "2.2.1";
+VGNTK.Version = "2.2.2";
 
 --[[------------------------------------------------------------------
   Correctly includes a file

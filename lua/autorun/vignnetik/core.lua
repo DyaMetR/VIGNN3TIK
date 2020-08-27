@@ -21,9 +21,15 @@ end
 
 if CLIENT then
 
-  hook.Add("HUDPaint", "vgntk_draw", function()
+  -- draw vignette
+  hook.Add("HUDPaintBackground", "vgntk_vgn_draw", function()
     if (not VGNTK:IsEnabled()) then return end
     VGNTK:DrawHealthOverlay(VGNTK:IsPainEnabled());
+  end);
+
+  -- draw on top of vignette
+  hook.Add("HUDPaint", "vgntk_draw", function()
+    if (not VGNTK:IsEnabled()) then return end
     VGNTK:DrawArmourOverlay(VGNTK:GetArmourStyle());
     VGNTK:DrawAmmo(ScrW() * 0.8, ScrH(), VGNTK:GetCompositionMode(), VGNTK:GetAmmoStyle());
   end);
